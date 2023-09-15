@@ -26,7 +26,7 @@ public class Model {
         return phoneNumber;
     }
     public void setPhoneNumber(String phoneNumber) throws IllegalArgumentException {
-        if (!phoneNumber.matches("\\d+") || phoneNumber.length() > 11) {
+        if (phoneNumber.matches("\\d+") || phoneNumber.length() > 11) {
             this.phoneNumber = phoneNumber;
         } else {
             throw new IllegalArgumentException("Ошибка ввода - Номер телефона");
